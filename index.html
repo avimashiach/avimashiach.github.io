@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>אבי משיח אלומיניום</title>
 
+  <!-- CSS הראשי -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/images.jpg" />
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZWJVKM77V"></script>
   <script>
@@ -21,120 +27,16 @@
   <meta property="og:image:alt" content="דלת בלגי" />
   <meta property="og:url" content="https://avimashiach.github.io" />
   <meta property="og:type" content="website" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/images.jpg" />
-
-  <!-- CSS inline -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #e6f0ff; /* רקע כחול בהיר */
-      color: #333;
-    }
-    header {
-      background-color: #007bff; /* הכחול שלך */
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background-color: #0056b3; /* כחול כהה לניווט */
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 15px;
-    }
-    .gallery img {
-      width: 100%;
-      cursor: pointer;
-      border: 2px solid #007bff;
-      border-radius: 5px;
-    }
-    footer {
-      background-color: #007bff;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-    button, .floating-icons a {
-      background-color: #007bff;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      display: inline-block;
-      cursor: pointer;
-      margin: 5px;
-    }
-    button:hover, .floating-icons a:hover {
-      background-color: #0056b3;
-    }
-    .floating-icons {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    /* Lightbox */
-    #lightbox {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
-    }
-    #lightbox img {
-      max-width: 90%;
-      max-height: 80%;
-    }
-    #lightbox .close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      color: white;
-      font-size: 40px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-  </style>
 </head>
 <body>
 
   <header>
     <h1>אבי משיח אלומיניום</h1>
-    <p>אלומיניום בהתאמה אישית – חלונות ודלתות בלגיים, סגירות חורף , תריסים חשמליים ועוד.</p>
+    <p>אלומיניום בהתאמה אישית – חלונות ודלתות בלגיים, סגירות חורף , תריסים חשמליים ועוד . </p>
   </header>
 
   <nav>
-    <a href="#about-us">אודות</a>
+    <a href="#about">אודות</a>
     <a href="#gallery">גלריה</a>
     <a href="#contact">צור קשר</a>
   </nav>
@@ -155,6 +57,7 @@
         <figcaption>מחיצת חדר משרדים בפרופיל 2000 משולב זכוכית</figcaption>
         <img src="images/images.jpg" alt="דלת בלגי" class="clickable-img" />
       </figure>
+      <!-- כל שאר התמונות נשארות כמו שהיו -->
       <figure>
         <figcaption>סגירת מרפסת גג הזזה מדגם 9000</figcaption>
         <img src="images/images2.jpg" alt="חלון בלגי" class="clickable-img" />
@@ -163,7 +66,7 @@
         <figcaption>דלתות עם קבועים מדגם 4300 בלגי</figcaption>
         <img src="images/images3.jpg" alt="סגירת חורף" class="clickable-img" />
       </figure>
-      <!-- שאר התמונות נשמרות כמו שהיו -->
+      <!-- שאר התמונות נשארות ללא שינוי -->
     </div>
   </section>
 
@@ -185,8 +88,12 @@
 
   <!-- כפתורים צפים -->
   <div class="floating-icons">
-    <a href="https://wa.me/972507527335" target="_blank" class="whatsapp-icon" title="וואטסאפ">וואטסאפ</a>
-    <a href="https://www.facebook.com/alumpsagot" target="_blank" class="facebook-icon" title="פייסבוק">פייסבוק</a>
+    <a href="https://wa.me/972507527335" target="_blank" class="whatsapp-icon" title="וואטסאפ">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="וואטסאפ">
+    </a>
+    <a href="https://www.facebook.com/alumpsagot" target="_blank" class="facebook-icon" title="פייסבוק">
+      <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="פייסבוק">
+    </a>
   </div>
 
   <!-- Lightbox -->
