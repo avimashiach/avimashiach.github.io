@@ -105,8 +105,8 @@ button:hover {
 
 /* פוטר */
 footer {
-  background-color: #003b5c;
-  color: white;
+  background-color: #0ABAB5;
+  color: #0ABAB5;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
@@ -190,6 +190,7 @@ footer a {
 #lightbox .close:hover {
   color: #ff5555;
 }
+
 
 
 
