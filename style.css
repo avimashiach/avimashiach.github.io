@@ -2,14 +2,14 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #f9fdff;
+  background-color: blue;
   color: #333;
   direction: rtl;
 }
 
 /* כותרת */
 header {
-  background-color: #1E90FF
+  background-color: blue;
   color: #1E90FF
   padding: 30px 20px;
   text-align: center;
@@ -190,5 +190,6 @@ footer a {
 #lightbox .close:hover {
   color: #ff5555;
 }
+
 
 
