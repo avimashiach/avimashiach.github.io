@@ -9,8 +9,8 @@ body {
 
 /* כותרת */
 header {
-  background-color: #d0ecff;
-  color: #003b5c;
+  background-color: #1E90FF
+  color: #1E90FF
   padding: 30px 20px;
   text-align: center;
 }
@@ -190,4 +190,5 @@ footer a {
 #lightbox .close:hover {
   color: #ff5555;
 }
+
 
