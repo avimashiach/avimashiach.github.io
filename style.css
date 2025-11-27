@@ -70,7 +70,7 @@ input, textarea {
 
 button {
   background-color: #00aaff;
-  color: white;
+  color: #00aaff;
   border: none;
   padding: 12px;
   font-size: 18px;
@@ -190,3 +190,4 @@ footer a {
 #lightbox .close:hover {
   color: #ff5555;
 }
+
