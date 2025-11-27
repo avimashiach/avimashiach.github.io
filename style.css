@@ -1,8 +1,8 @@
-/* גוף הדף */
+/* כללי */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #d0ecff; /* תכלת לכל הדף */
+  background-color: #f9fdff;
   color: #333;
   direction: rtl;
 }
@@ -11,9 +11,8 @@ body {
 header {
   background-color: #d0ecff;
   color: #003b5c;
-  padding: 20px 0;
+  padding: 30px 20px;
   text-align: center;
-  border-radius: 0;
 }
 
 header h1 {
@@ -22,7 +21,7 @@ header h1 {
 }
 
 header p {
-  margin: 5px 0 0;
+  margin: 10px 0 0;
   font-size: 1.2em;
 }
 
@@ -44,12 +43,13 @@ nav a:hover {
   background-color: #008ecc;
 }
 
-/* סקשנים */
+/* תוכן */
 section {
   padding: 40px 20px;
   max-width: 1000px;
-  margin: 20px auto;
+  margin: auto;
   background-color: white;
+  margin-top: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
