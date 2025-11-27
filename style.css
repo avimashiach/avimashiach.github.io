@@ -2,16 +2,9 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #00aaff; /* צבע תכלת מלא גם בצדדים */
+  background-color: #f9fdff;
   color: #333;
   direction: rtl;
-}
-
-/* סביבה של הסקשנים */
-.sections-wrapper {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
 }
 
 /* כותרת */
@@ -20,18 +13,22 @@ header {
   color: #003b5c;
   padding: 30px 20px;
   text-align: center;
-  max-width: 1000px;
-  margin: auto;
-  border-radius: 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  margin: 10px 0 0;
+  font-size: 1.2em;
 }
 
 /* ניווט */
 nav {
   background-color: #00aaff;
   text-align: center;
-  max-width: 1000px;
-  margin: auto;
-  border-radius: 10px;
 }
 
 nav a {
@@ -49,9 +46,11 @@ nav a:hover {
 /* תוכן */
 section {
   padding: 40px 20px;
-  background-color: #d0ecff; /* רקע תכלת */
+  max-width: 1000px;
+  margin: auto;
+  background-color: white;
+  margin-top: 20px;
   border-radius: 10px;
-  margin-bottom: 20px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
@@ -191,3 +190,6 @@ footer a {
 #lightbox .close:hover {
   color: #ff5555;
 }
+
+
+
