@@ -2,15 +2,15 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: blue;
+  background-color: #f9fdff;
   color: #333;
   direction: rtl;
 }
 
 /* כותרת */
 header {
-  background-color: blue;
-  color: blue;
+  background-color: #d0ecff;
+  color: #003b5c;
   padding: 30px 20px;
   text-align: center;
 }
@@ -27,7 +27,7 @@ header p {
 
 /* ניווט */
 nav {
-  background-color: blue;
+  background-color: #00aaff;
   text-align: center;
 }
 
@@ -113,7 +113,7 @@ footer {
 }
 
 footer a {
-  color: #1E90FF
+  color: #00ffcc;
 }
 
 /* כפתורים צפים */
@@ -190,7 +190,6 @@ footer a {
 #lightbox .close:hover {
   color: #ff5555;
 }
-
 
 
 
