@@ -195,7 +195,13 @@ h2 {
   color: red;  /* כל הכותרות h2 יהיו אדומות */
 }
 
-h1 {
-  color: #0abab5; /* כחול Tiffany */
+/* הטקסט שמתחת p */
+h1 + p {
+  background-color: #0abab5; /* רקע כחול Tiffany */
+  color: #0abab5;            /* צבע הטקסט בצבע Tiffany */
+  padding: 10px 20px;        /* רווח פנימי סביב הטקסט */
+  text-align: center;         /* מרכז את הטקסט */
+  margin: 0;                  /* מחיקת מרווחים מיותרים */
 }
+
 
