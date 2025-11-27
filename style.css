@@ -10,7 +10,7 @@ body {
 /* כותרת */
 header {
   background-color: blue;
-  color: #1E90FF
+  color: blue;
   padding: 30px 20px;
   text-align: center;
 }
@@ -27,7 +27,7 @@ header p {
 
 /* ניווט */
 nav {
-  background-color: #00aaff;
+  background-color: blue;
   text-align: center;
 }
 
@@ -190,6 +190,7 @@ footer a {
 #lightbox .close:hover {
   color: #ff5555;
 }
+
 
 
 
