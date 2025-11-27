@@ -2,15 +2,15 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #f9fdff;
-  color: #333;
+  background-color: #0ABAB5;
+  color: #0ABAB5;
   direction: rtl;
 }
 
 /* כותרת */
 header {
-  background-color: #d0ecff;
-  color: #003b5c;
+  background-color: #0ABAB5;
+  color: #0ABAB5;
   padding: 30px 20px;
   text-align: center;
 }
@@ -34,7 +34,7 @@ nav {
 nav a {
   display: inline-block;
   padding: 15px 20px;
-  color: white;
+  color: #0ABAB5;
   text-decoration: none;
   font-weight: bold;
 }
@@ -190,6 +190,7 @@ footer a {
 #lightbox .close:hover {
   color: #ff5555;
 }
+
 
 
 
