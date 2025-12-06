@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>מאמרים - אבי משיח אלומיניום</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* מיכל מרכזי לטבלה */
+      .table-wrapper {
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 20px;
+      }
+
+      /* טבלה מעוצבת */
+      .articles-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: #ffffff;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+      }
+
+      .articles-table th,
+      .articles-table td {
+        padding: 18px;
+        font-size: 18px;
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      .articles-table th {
+        background: linear-gradient(to left, #0095ff, #0077cc);
+        color: white;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .articles-table td {
+        background-color: #ffffff;
+        vertical-align: top;
+      }
+
+      .articles-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      /* כפתור חזור */
+      .back-btn {
+        margin: 15px 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 8px;
+        border: none;
+        background-color: #0077cc;
+        color: #fff;
+      }
+
+      /* מרכז הכותרת */
+      header h1 {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 32px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>מאמרים מקצועיים בתחום האלומיניום</h1>
+    </header>
+
+    <button class="back-btn" onclick="history.back()">← חזור אחורה</button>
+
+    <div class="table-wrapper">
+      <!-- טבלת מאמרים -->
+      <table class="articles-table">
+        <tr>
+          <th>מספר</th>
+          <th>כותרת</th>
+          <th>תוכן</th>
+        </tr>
+
+        <!-- מאמר 1 -->
+        <tr>
+          <td>1</td>
+          <td>כל מה שצריך לדעת על חלונות בלגיים</td>
+          <td>
+            חלונות בלגיים הפכו לסטנדרט פופולרי בזכות עיצוב מודרני, חלוקה דקה
+            ועמידות גבוהה. הם מציעים בידוד תרמי ואקוסטי מצוין, קלות תחזוקה ומראה
+            יוקרתי שמתאים לכל בית.
+          </td>
+        </tr>
+
+        <!-- מאמר 2 -->
+        <tr>
+          <td>2</td>
+          <td>איך לבחור דלת אלומיניום איכותית?</td>
+          <td>
+            בחר פרופיל חזק (בלגי או קלאסי), זכוכית טריפלקס או מחוסמת, אטמים
+            וצירים איכותיים, והקפד על התקנה מקצועית עם אחריות מלאה.
+          </td>
+        </tr>
+
+        <!-- מאמר 3 -->
+        <tr>
+          <td>3</td>
+          <td>הבדלים בין זכוכיות – עוביים וטריפלקס</td>
+          <td>
+            זכוכיות מגיעות בעוביים שונים (4–8 מ״מ). זכוכית טריפלקס מורכבת משכבות
+            עם סרט פנימי, מה שמעניק חוזק רב ובטחון גבוה במקרה של שבירה.
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
