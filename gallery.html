@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>אבי משיח אלומיניום - גלריית פרויקטים</title>
+
+  <link rel="icon" type="image/jpeg" href="images/images14.jpg" />
+
+  <!-- SEO בסיסי -->
+  <meta name="description" content="גלריית פרויקטים של אבי משיח אלומיניום – חלונות בלגיים, דלתות איכותיות, תריסים חשמליים וסגירות חורף." />
+  <meta name="keywords" content="גלריית פרויקטים, חלונות בלגיים, דלתות אלומיניום, תריסים חשמליים, סגירות חורף, עבודות אלומיניום" />
+  <meta name="author" content="אבי משיח אלומיניום" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.avimashiach.co.il/gallery.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="גלריית פרויקטים - אבי משיח אלומיניום" />
+  <meta property="og:description" content="גלריית פרויקטים – חלונות בלגיים, דלתות איכותיות, תריסים חשמליים וסגירות חורף." />
+  <meta property="og:image" content="https://www.avimashiach.co.il/images/images14.jpg" />
+  <meta property="og:url" content="https://www.avimashiach.co.il/gallery.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="גלריית פרויקטים - אבי משיח אלומיניום" />
+  <meta name="twitter:description" content="גלריית פרויקטים – חלונות בלגיים, דלתות איכותיות, תריסים חשמליים וסגירות חורף." />
+  <meta name="twitter:image" content="https://www.avimashiach.co.il/images/images14.jpg" />
+</head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>גלריה - אבי משיח אלומיניום</title>
+    <style>
+      :root {
+        --bg-dark: #0a0a0f;
+        --bg-card: rgba(255, 255, 255, 0.03);
+        --bg-glass: rgba(255, 255, 255, 0.05);
+        --border-glass: rgba(255, 255, 255, 0.08);
+        --text-primary: #ffffff;
+        --text-secondary: rgba(255, 255, 255, 0.6);
+        --accent-red: #ff3d5a;
+        --accent-green: #00d4aa;
+        --accent-gold: #ffd700;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Space Grotesk", sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-primary);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* Grid Background */
+      .grid-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0.02) 1px,
+            transparent 1px
+          ),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 60px 60px;
+      }
+      .grid-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+            ellipse at 50% 0%,
+            rgba(255, 61, 90, 0.08) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse at 80% 50%,
+            rgba(0, 212, 170, 0.05) 0%,
+            transparent 40%
+          ),
+          radial-gradient(
+            ellipse at 20% 80%,
+            rgba(255, 215, 0, 0.05) 0%,
+            transparent 40%
+          );
+      }
+
+      /* Particles */
+      .particles {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        pointer-events: none;
+        overflow: hidden;
+      }
+      .particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        opacity: 0.3;
+        animation: float-particle linear infinite;
+      }
+      .particle:nth-child(odd) {
+        background: var(--accent-red);
+      }
+      .particle:nth-child(3n) {
+        background: var(--accent-green);
+      }
+      @keyframes float-particle {
+        0% {
+          transform: translateY(100vh) rotate(0deg);
+          opacity: 0;
+        }
+        10%,
+        90% {
+          opacity: 0.3;
+        }
+        100% {
+          transform: translateY(-20px) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      /* Header */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+      }
+      nav {
+        display: flex;
+        gap: 8px;
+      }
+      nav a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 10px 20px;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+      }
+      nav a:hover,
+      nav a.nav-active {
+        color: var(--text-primary);
+        background: var(--bg-glass);
+        border: 1px solid var(--border-glass);
+      }
+      .nav-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 1001;
+      }
+      .nav-toggle span {
+        width: 24px;
+        height: 2px;
+        background: var(--text-primary);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+      .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+      }
+      .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+      .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+      }
+
+      /* Section headers */
+      .section-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .section-tag {
+        display: inline-block;
+        padding: 6px 16px;
+        background: var(--bg-glass);
+        border: 1px solid var(--border-glass);
+        border-radius: 100px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--accent-green);
+        margin-bottom: 24px;
+      }
+      .section-title {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 800;
+        letter-spacing: -2px;
+      }
+      .section-subtitle {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .gradient {
+        background: linear-gradient(
+          135deg,
+          var(--accent-red),
+          var(--accent-gold),
+          var(--accent-green)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Gallery */
+      .gallery-filters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        padding: 0 10px;
+      }
+      .gallery-filters button {
+        background: var(--bg-glass);
+        border: 1px solid var(--border-glass);
+        color: var(--text-primary);
+        padding: 10px 18px;
+        border-radius: 100px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+      .gallery-filters button:hover {
+        background: var(--accent-green);
+        transform: scale(1.05);
+      }
+      .gallery-filters button.active {
+        background: var(--accent-red);
+        border: 1px solid var(--accent-red);
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 16px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .gallery figure {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        background: var(--bg-glass);
+        border: 1px solid var(--border-glass);
+      }
+      .gallery img {
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+        background: var(--bg-dark);
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+      figcaption {
+        padding: 10px;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        text-align: center;
+      }
+
+      /* Footer */
+      footer {
+        padding: 40px 20px;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        background: rgba(255, 255, 255, 0.02);
+        border-top: 1px solid var(--border-glass);
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          position: fixed;
+          top: 80px;
+          right: 0;
+          background: var(--bg-dark);
+          flex-direction: column;
+          width: 70%;
+          max-width: 300px;
+          height: 100vh;
+          padding: 20px;
+          gap: 20px;
+          transform: translateX(100%);
+          transition: transform 0.3s ease;
+          z-index: 999;
+        }
+        nav.open {
+          transform: translateX(0);
+        }
+        .nav-toggle {
+          display: flex;
+        }
+      }
+
+      /* Floating Social Buttons */
+      .floating-icons {
+        position: fixed;
+        left: 20px;
+        top: 90%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 10000;
+      }
+      .floating-icons .social-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 30px;
+        padding: 12px 20px;
+        color: var(--text-primary);
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+       
+      }
+      @keyframes shake-strong {
+        0% {
+          transform: translateX(0);
+        }
+        20% {
+          transform: translateX(-6px);
+        }
+        40% {
+          transform: translateX(6px);
+        }
+        60% {
+          transform: translateX(-6px);
+        }
+        80% {
+          transform: translateX(6px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      .floating-icons .social-btn img {
+        width: 24px;
+        height: 24px;
+      }
+      .floating-icons .social-btn.whatsapp {
+        background: #25d366;
+        box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        color: #fff;
+      }
+
+      .floating-icons .social-btn.facebook {
+        background: #1877f2;
+        box-shadow: 0 8px 20px rgba(24, 119, 242, 0.4);
+        color: #fff;
+      }
+
+      .floating-icons .social-btn span {
+        display: inline-block;
+      }
+      @keyframes float-btn {
+        0%,
+        100% {
+          transform: translateX(0) translateY(0);
+        }
+        50% {
+          transform: translateX(0) translateY(-4px);
+        }
+      }
+      @media (max-width: 768px) {
+        .floating-icons {
+          left: 10px;
+          gap: 10px;
+        }
+        .floating-icons .social-btn {
+          padding: 10px 15px;
+          font-size: 0.9rem;
+        }
+        .floating-icons .social-btn img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      /* Lightbox */
+      .lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 2000;
+      }
+      .lightbox.active {
+        opacity: 1;
+        pointer-events: all;
+      }
+      .lightbox img {
+        max-width: 95%;
+        max-height: 90%;
+        border-radius: 10px;
+      }
+      .lightbox .close,
+      .lightbox .prev,
+      .lightbox .next {
+        position: absolute;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        user-select: none;
+        padding: 10px;
+      }
+      .lightbox .close {
+        top: 20px;
+        right: 20px;
+        font-size: 2.5rem;
+        transform: none;
+      }
+      .lightbox .prev {
+        left: 20px;
+      }
+      .lightbox .next {
+        right: 20px;
+      }
+
+      .call-now-badge {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 9999;
+
+        background: linear-gradient(135deg, #00eaff, #00b3ff);
+        color: #000;
+        padding: 12px 18px;
+        border-radius: 14px;
+
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+
+        box-shadow: 0 0 20px rgba(0, 234, 255, 0.6);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .call-now-badge:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(0, 234, 255, 0.9);
+      }
+/* התאמה לנייד – מיקום אחיד לשני הכפתורים */
+@media (max-width: 768px) {
+
+  .call-now-badge,
+  .nav-toggle {
+    position: fixed;
+    top: calc(env(safe-area-inset-top) + 12px);
+    z-index: 10000;
+  }
+
+  .call-now-badge {
+    font-size: 14px;
+    padding: 10px 14px;
+    left: 12px;
+  }
+
+  /* כפתור ניווט מובייל */
+  .nav-toggle {
+    right: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+
+    background: #00eaff;
+    color: #000;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    box-shadow: 0 3px 8px rgba(0, 234, 255, 0.45);
+    transition: all 0.25s ease;
+
+    text-align: center;
+    user-select: none;
+  }
+
+  .nav-toggle:hover {
+    background: #00c4e0;
+    box-shadow: 0 4px 12px rgba(0, 234, 255, 0.6);
+  }
+
+  /* תפריט ניווט נפתח */
+  header nav {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 10px;
+
+    position: fixed;
+    top: calc(env(safe-area-inset-top) + 70px);
+    right: 10px;
+
+    width: 190px;
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  header nav.open {
+    display: flex;
+  }
+}
+
+/* במחשב – כפתור ניווט לא מוצג */
+@media (min-width: 769px) {
+  .nav-toggle {
+    display: none;
+  }
+}
+
+/* הסתרת תגית */
+.section-tag {
+  visibility: hidden;
+}
+
+/* ===== FIX מושלם למיקום כפתורי מובייל (אייפון + גלקסי) ===== */
+@media (max-width: 768px) {
+
+  .call-now-badge,
+  .nav-toggle {
+    position: fixed !important;
+    top: calc(env(safe-area-inset-top) + 12px) !important;
+    z-index: 10001;
+  }
+
+  .call-now-badge {
+    left: 12px !important;
+  }
+
+  .nav-toggle {
+    right: 12px !important;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    background: #00eaff;
+    color: #000;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 234, 255, 0.45);
+  }
+}
+@media (max-width: 768px) {
+  .lightbox-close,
+  .modal-close,
+  .gallery-close {
+    position: absolute; /* לא fixed */
+    top: 10px;
+    right: 10px;
+
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 5;
+    pointer-events: auto;
+  }
+}
+/* ===== FIX לאיקס של סגירת תמונה במובייל ===== */
+
+/* להרים את הלייטבוקס מעל כל הכפתורים */
+.lightbox {
+  z-index: 20000 !important;
+}
+
+/* עיצוב ומיקום האיקס במובייל */
+@media (max-width: 768px) {
+  .lightbox .close {
+    position: fixed;
+    top: calc(env(safe-area-inset-top) + 10px);
+    right: 10px;
+
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 20001;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+}
+    </style>
+
+
+
+  </head>
+   <link rel="icon" type="image/jpeg" href="images/images14.jpg" />
+
+  <body>
+    <!-- Call Now Badge -->
+<a href="tel:0507527335" class="call-now-badge">
+  📞 חיוג מהיר בלחיצה <strong>050-752-7335</strong>
+</a>
+
+<!-- Nav Toggle -->
+<div class="nav-toggle" id="navToggle">תפריט ניווט</div>
+
+
+    <div class="grid-bg"></div>
+    <div class="particles"></div>
+
+    <header>
+      <nav>
+        <a href="index.html">בית</a>
+        <a href="index.html#about">אודותינו</a>
+
+        <a href="gallery.html" class="nav-active">גלריית פרוייקטים</a>
+        <a href="calculator.html">מחשבון אלומיניום</a>
+        <a href="tips.html">טיפים</a>
+        <a href="bikorot.html">ביקורות ודירוג</a>
+        <a href="takanon.html">מדיניות פרטיות</a>
+        <a href="index.html#contact">צור קשר</a>
+      </nav>
+   
+ 
+
+
+</header>
+    </header>
+
+    <section id="gallery">
+      <div class="section-header">
+        <div class="section-tag">גלריה</div>
+        <h2 class="section-title gradient">גלריית פרוייקטים</h2>
+        <p class="section-subtitle">
+          <strong>
+            חלק קטן מתוך מגוון הפרויקטים שיצרנו – שילוב מושלם של איכות, דיוק,
+            יצירתיות וניסיון רב שנים, שמבטיח תוצאה מרשימה ומותאמת בדיוק לצרכים
+            שלכם.
+          </strong>
+        </p>
+      </div>
+
+      <div class="gallery-filters">
+        <button data-filter="all" class="active">הכל</button>
+        <button data-filter="classic-window">
+          חלונות וויטרינות 7000 - 9000 קלאסי
+        </button>
+        <button data-filter="belgian-window">חלונות וויטרינות בלגי</button>
+        <button data-filter="window-kis-kip">חלונות כיס וקיפ</button>
+        <button data-filter="belgian-doors">דלתות בלגי</button>
+        <button data-filter="doors-2000-sikori">דלתות לבניינים וסיקורית</button>
+        <button data-filter="pergula">פרגולות וסגירות חורף</button>
+        <button data-filter="trisim">תריסים חשמליים</button>
+         <button data-filter="makot">מעקות </button>
+        
+      </div>
+
+      <div class="gallery">
+        <!-- חלונות -->
+        <figure data-category="belgian-window">
+          <figcaption>ויטרינה קליל 7300 בלגי</figcaption>
+          <img src="images/images.jpg" class="clickable-img" />
+        </figure>
+
+        <figure data-category="classic-window">
+          <figcaption>ויטרינה מדגם מונובלוק 9000 עם תריס חשמלי</figcaption>
+          <img src="images/images2.jpg" class="clickable-img" />
+        </figure>
+        <figure data-category="belgian-window">
+          <figcaption>חלון בלגי מדגם 4300 עם זכוכיות טריפלקס</figcaption>
+          <img src="images/images3.jpg" class="clickable-img" />
+        </figure>
+        <figure data-category="belgian-doors">
+          <figcaption>
+            דלת בלגית מעוצבת מדגם 4300 משולב זכוכית טריפלקס חלבי
+          </figcaption>
+          <img src="images/images4.jpg" class="clickable-img" />
+        </figure>
+        <figure data-category="belgian-doors">
+          <figcaption>
+            דלת בלגית מעוצבת מדגם 4300 משולב זכוכית טריפלקס חלבי
+          </figcaption>
+          <img src="images/images5.jpg" class="clickable-img" />
+        </figure>
+        <figure data-category="belgian-doors">
+          <figcaption>דלת בלגית מעוצבת משולב זכוכית גלינה פסים 8 ממ</figcaption>
+          <img src="images/images6.jpg" class="clickable-img" />
+        </figure>
+        <figure data-category="doors-2000-sikori">
+          <figcaption>
+            מחיצת חדר משרדים בדלתות מפרופיל 2000 כולל קירות גבס
+          </figcaption>
+          <img src="images/images7.jpg" class="clickable-img" />
+        </figure>
+        <figure data-category="classic-window">
+          <figcaption>סגירת מרפסת (חורף) מדגם 9000 הזזה</figcaption>
+          <img src="images/images8.jpg" class="clickable-img" />
+        </figure>
+
+        <!-- דלתות -->
+        <figure data-category="classic-window">
+          <figcaption>ויטרינה הזזה מדגם 7000 משולב קבוע עליון</figcaption>
+          <img src="images/images9.jpg" class="clickable-img" />
+        </figure>
+        <figure data-category="window-kis-kip">
+          <figcaption>חלון מדגם 1700 עם קבוע תחתון ותריסים</figcaption>
+          <img src="images/images10.jpg" class="clickable-img" />
+        </figure>
+        <figure data-category="belgian-window">
+          <figcaption>חלון בלגיי דרייקיפ מדגם 4300 בשילוב קבועים</figcaption>
+          <img src="images/images11.jpg" class="clickable-img" />
+        </figure>
+        <figure data-category="classic-window">
+          <figcaption>חלון מדגם 7000 עם זכוכית חלבית</figcaption>
+          <img src="images/images12.jpg" class="clickable-img" />
+        </figure>
+        <figure data-category="belgian-window">
+          <figcaption>חלון בלגי מדגם 4350</figcaption>
+          <img src="images/images13.jpg" class="clickable-img" />
+        </figure>
+
+        
+        <figure data-category="belgian-window">
+          <figcaption>זוג חלונות מדגם 7300 משולב תריסים</figcaption>
+          <img src="images/images14.jpg" class="clickable-img" />
+        </figure>
+        <figure data-category="window-kis-kip">
+          <figcaption>חלון בלגי משתפע מדגם 4300</figcaption>
+          <img src="images/images15.jpg" class="clickable-img" />
+        </figure>
+        <figure data-category="classic-window">
+          <figcaption>חלון הזזה מדגם 7000 הקלאסי משולב זכוכית חלבי</figcaption>
+          <img src="images/images16.jpg" class="clickable-img" />
+        </figure>
+        <figure data-category="trisim">
+          <figcaption>
+            תריס חשמלי שלב אור בוטרינה מונובלוק מנוע sompy
+          </figcaption>
+          <img src="images/images17.jpg" class="clickable-img" />
+        </figure>
+        <figure data-category="doors-2000-sikori">
+          <figcaption>דלת כניסה לסטודיו מדגם 2000 עם משאבת דלת</figcaption>
+          <img src="images/images18.jpg" class="clickable-img" />
+        </figure>
+         <figure data-category="makot">
+          <figcaption>מעקות מאחז יד עם זכוכיות טריפלקס 5+5</figcaption>
+          <img src="images/images19.jpg" class="clickable-img" />
+        </figure> <figure data-category="doors-2000-sikori">
+          <figcaption>דלת מדגם 2000 מעוצבת</figcaption>
+          <img src="images/images20.jpg" class="clickable-img" />
+        </figure> <figure data-category="'belgian-window">
+          <figcaption>ויטרינה מדגם בלגי 7300 </figcaption>
+          <img src="images/images21.jpg" class="clickable-img" />
+        </figure> <figure data-category="doors-2000-sikori">
+          <figcaption>דלת כניסה לבניין מדגם 2000</figcaption>
+          <img src="images/images22.jpg" class="clickable-img" />
+        </figure> <figure data-category="classic-window">
+          <figcaption>ויטרינה מדגם 7000 הזזה</figcaption>
+          <img src="images/images23.jpg" class="clickable-img" />
+        </figure> <figure data-category="classic-window">
+          <figcaption>ויטרינה מונבלוק 9000 עם תריס חשמלי</figcaption>
+          <img src="images/images24.jpg" class="clickable-img" />
+        </figure> <figure data-category="pergula">
+          <figcaption>פרגולה עם סנטף bh</figcaption>
+          <img src="images/images25.jpg" class="clickable-img" />
+        </figure> <figure data-category="doors-2000-sikori">
+          <figcaption>דלת לובי מדגם 2000 </figcaption>
+          <img src="images/images26.jpg" class="clickable-img" />
+        </figure> <figure data-category="doors-2000-sikori">
+          <figcaption>דלת סיקורית עם קבוע</figcaption>
+          <img src="images/images27.jpg" class="clickable-img" />
+        </figure> <figure data-category="doors-2000-sikori">
+          <figcaption>דלת 2000 עם חלוקות</figcaption>
+          <img src="images/images28.jpg" class="clickable-img" />
+        </figure> <figure data-category="window-kis-kip">
+          <figcaption>חלון מדגם קיפ 4500</figcaption>
+          <img src="images/images29.jpg" class="clickable-img" />
+        </figure> <figure data-category="classic-window">
+          <figcaption>חלון מדגם 7000 עם תריסים והלבשה</figcaption>
+          <img src="images/images30.jpg" class="clickable-img" />
+        </figure> <figure data-category="belgian-window">
+          <figcaption>חלון מדגם בלגי 4300 עם קיפ</figcaption>
+          <img src="images/images31.jpg" class="clickable-img" />
+        </figure> <figure data-category="trisim">
+          <figcaption>תריס חשמלי שלב אור עם מנוע סומפי </figcaption>
+          <img src="images/images32.jpg" class="clickable-img" />
+        </figure> <figure data-category="trisim">
+          <figcaption>תריס חשמלי ארגז חיצוני</figcaption>
+          <img src="images/images33.jpg" class="clickable-img" />
+        </figure> <figure data-category="classic-window">
+          <figcaption>זוג ויטרינה סלון דגם 7000</figcaption>
+          <img src="images/images34.jpg" class="clickable-img" />
+        </figure> <figure data-category="classic-window">
+          <figcaption>ויטרינה סלון מדגם 7000 עם תריסים ידנים</figcaption>
+          <img src="images/images35.jpg" class="clickable-img" />
+        </figure> <figure data-category="belgian-window">
+          <figcaption>ויטרינה מדגם בלגי 7300 עם קיפ עליון </figcaption>
+          <img src="images/images36.jpg" class="clickable-img" />
+        </figure> <figure data-category="pergula">
+          <figcaption>סגירת חורף מדגם 7000 הזזה כולל גג פאנל מבודד </figcaption>
+          <img src="images/images37.jpg" class="clickable-img" />  </figure>
+               
+                  <figure data-category="trisim">
+          <figcaption>זוג תריסים חשמליים ארגז חיצוני</figcaption>
+          <img src="images/images38.jpg" class="clickable-img" />
+        </figure>        <figure data-category="belgian-window">
+          <figcaption>ויטרינה בלגי 7300 עם תריס חשמלי</figcaption>
+          <img src="images/images39.jpg" class="clickable-img" />
+        </figure>        <figure data-category="classic-window">
+          <figcaption>ויטרינה מדגם 9000 מונובלוק</figcaption>
+          <img src="images/images40.jpg" class="clickable-img" />
+        </figure>        <figure data-category="belgian-window">
+          <figcaption>חלון מדגם בלגי 1700 </figcaption>
+          <img src="images/images41.jpg" class="clickable-img" />
+        </figure>        <figure data-category="pergula">
+          <figcaption>סגירת מחסן מאלומיניום</figcaption>
+          <img src="images/images42.jpg" class="clickable-img" />
+        </figure>        <figure data-category="pergula">
+          <figcaption>פרגולה סרגלים עם כיסוי bh</figcaption>
+          <img src="images/images43.jpg" class="clickable-img" />
+        </figure>        <figure data-category="belgian-window">
+          <figcaption>חלון מדגם בלגי 7300</figcaption>
+          <img src="images/images44.jpg" class="clickable-img" />
+        </figure>        <figure data-category="pergula">
+          <figcaption>סגירת מרפסת (חורף) דגם 7000</figcaption>
+          <img src="images/images45.jpg" class="clickable-img" />
+        </figure>        <figure data-category="doors-2000-sikori">
+          <figcaption>דלת מדגם 4500 עם קבועים </figcaption>
+          <img src="images/images46.jpg" class="clickable-img" />
+        </figure>        <figure data-category="window-kis-kip">
+          <figcaption>חלון כיס מדגם 1700</figcaption>
+          <img src="images/images47.jpg" class="clickable-img" />
+        </figure>        <figure data-category="trisim">
+          <figcaption>תריס חשמלי שלב אור מראה חיצוני</figcaption>
+          <img src="images/images48.jpg" class="clickable-img" />
+        </figure>        <figure data-category="window-kis-kip">
+          <figcaption>חלון כיס מדגם בלגי 1700</figcaption>
+          <img src="images/images49.jpg" class="clickable-img" />
+        </figure>        <figure data-category="window-kis-kip">
+          <figcaption>חלון כיס בלגי מדגם 1700</figcaption>
+          <img src="images/images50.jpg" class="clickable-img" />
+        </figure>        <figure data-category="window-kis-kip">
+          <figcaption>חלון קיפ מדגם בלגי 4300</figcaption>
+          <img src="images/images51.jpg" class="clickable-img" />
+
+        </figure>
+      </div>
+
+    </section>
+
+    <div class="lightbox">
+      <span class="close">&times;</span>
+      <span class="prev">&#10094;</span>
+      <img src="" />
+      <span class="next">&#10095;</span>
+    </div>
+
+    <!-- Floating Social Buttons -->
+    <div class="floating-icons">
+      <a
+        href="https://wa.me/972507527335"
+        target="_blank"
+        class="social-btn whatsapp"
+        title="וואטסאפ"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="וואטסאפ"
+        />
+        <span>וואטסאפ</span>
+      </a>
+      <a
+        href="https://www.facebook.com/alumpsagot?locale=he_IL"
+        target="_blank"
+        class="social-btn facebook"50
+        title="פייסבוק"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+          alt="פייסבוק"
+        />
+        <span>פייסבוק</span>
+      </a>
+    </div>
+
+    <script>
+      // Navigation toggle
+      const navToggle = document.querySelector(".nav-toggle");
+      const nav = document.querySelector("nav");
+      navToggle.addEventListener("click", () => {
+        nav.classList.toggle("open");
+        navToggle.classList.toggle("active");
+      });
+
+      // Particles
+      const particlesContainer = document.querySelector(".particles");
+      for (let i = 0; i < 80; i++) {
+        const particle = document.createElement("div");
+        particle.classList.add("particle");
+        particle.style.left = Math.random() * 100 + "vw";
+        particle.style.top = Math.random() * 100 + "vh";
+        particle.style.width = particle.style.height =
+          Math.random() * 4 + 2 + "px";
+        particle.style.animationDuration = Math.random() * 5 + 5 + "s";
+        particlesContainer.appendChild(particle);
+      }
+
+      // Lightbox
+      const lightbox = document.querySelector(".lightbox");
+      const lightboxImg = lightbox.querySelector("img");
+      const closeBtn = lightbox.querySelector(".close");
+      const prevBtn = lightbox.querySelector(".prev");
+      const nextBtn = lightbox.querySelector(".next");
+      const images = document.querySelectorAll(".clickable-img");
+      let currentIndex = 0;
+
+      function openLightbox(index) {
+        currentIndex = index;
+        lightboxImg.src = images[currentIndex].src;
+        lightbox.classList.add("active");
+      }
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+      }
+      function showPrev() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        lightboxImg.src = images[currentIndex].src;
+      }
+      function showNext() {
+        currentIndex = (currentIndex + 1) % images.length;
+        lightboxImg.src = images[currentIndex].src;
+      }
+
+      images.forEach((img, idx) =>
+        img.addEventListener("click", () => openLightbox(idx))
+      );
+      closeBtn.addEventListener("click", closeLightbox);
+      prevBtn.addEventListener("click", showPrev);
+      nextBtn.addEventListener("click", showNext);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+
+
+      
+      // Gallery Filter
+      const filterButtons = document.querySelectorAll(
+        ".gallery-filters button"
+      );
+      const figures = document.querySelectorAll(".gallery figure");
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          const filter = btn.dataset.filter;
+          figures.forEach((fig) => {
+            fig.style.display =
+              filter === "all" || fig.dataset.category === filter ? "" : "none";
+          });
+        });
+      });
+      
+      
+      
+    </script>
+    <script src="main.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>אבי משיח אלומיניום - מחשבון אלומיניום</title>
+    <link rel="icon" type="image/jpeg" href="images/images14.jpg" />
+
+    <!-- SEO בסיסי -->
+    <meta
+      name="description"
+      content="מחשבון אלומיניום מתקדם – חישוב עלויות חלונות בלגיים, דלתות, תריסים חשמליים וסגירות חורף."
+    />
+    <meta
+      name="keywords"
+      content="מחשבון אלומיניום, חלונות בלגיים, דלתות אלומיניום, תריסים חשמליים, סגירות חורף, חישוב עלויות אלומיניום"
+    />
+    <meta name="author" content="אבי משיח אלומיניום" />
+
+    <!-- Canonical -->
+    <link
+      rel="canonical"
+      href="https://www.avimashiach.co.il/calculator.html"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="מחשבון אלומיניום - אבי משיח אלומיניום" />
+    <meta
+      property="og:description"
+      content="חישוב עלויות חלונות בלגיים, דלתות איכותיות, תריסים חשמליים וסגירות חורף."
+    />
+    <meta
+      property="og:image"
+      content="https://www.avimashiach.co.il/images/images14.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://www.avimashiach.co.il/calculator.html"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="מחשבון אלומיניום - אבי משיח אלומיניום"
+    />
+    <meta
+      name="twitter:description"
+      content="חישוב עלויות חלונות בלגיים, דלתות איכותיות, תריסים חשמליים וסגירות חורף."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.avimashiach.co.il/images/images14.jpg"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>מחשבון אלומיניום - אבי משיח אלומיניום</title>
+    <style>
+      :root {
+        --bg-dark: #1a1a22;
+        --bg-glass: rgba(255, 255, 255, 0.12);
+        --border-glass: rgba(255, 255, 255, 0.2);
+        --text-primary: #ffffff;
+        --text-secondary: #f1f1f1;
+        --accent-red: #ff3d5a;
+        --accent-green: #00d4aa;
+        --accent-gold: #ffd700;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+        background: linear-gradient(135deg, #1a1a22, #0a0a0f);
+        color: var(--text-primary);
+        line-height: 1.6;
+        padding-bottom: 60px;
+      }
+
+      .calculator-wrapper {
+        max-width: 600px;
+        margin: 80px auto 40px;
+        padding: 40px;
+        background: var(--bg-glass);
+        border-radius: 25px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(25px);
+        text-align: center;
+        position: relative;
+      }
+
+      h2 {
+        font-size: 2rem;
+        color: var(--accent-green);
+        margin-bottom: 30px;
+      }
+
+      label {
+        display: block;
+        margin: 15px 0 8px;
+        font-size: 1.1rem;
+        color: var(--text-primary);
+        text-align: right;
+      }
+
+      select,
+      input[type="number"] {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        border: 1px solid var(--border-glass);
+        background: rgba(0, 0, 0, 0.3);
+        color: var(--text-primary);
+        font-size: 1rem;
+        appearance: none; /* מבטיח שהפלטפורמות לא מוסיפות צבע או רקע משלהן */
+      }
+
+      option {
+        background: var(--bg-dark);
+        color: var(--text-primary);
+      }
+
+      button {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        background: linear-gradient(
+          135deg,
+          var(--accent-red),
+          var(--accent-gold)
+        );
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(255, 61, 90, 0.4);
+      }
+
+      #result {
+        margin-top: 25px;
+        font-size: 1.3rem;
+        color: var(--accent-green);
+        font-weight: 600;
+      }
+
+      .back-btn {
+        display: block;
+        margin: 20px auto;
+        padding: 12px 25px;
+        background: linear-gradient(
+          135deg,
+          var(--accent-red),
+          var(--accent-gold)
+        );
+        color: var(--text-primary);
+        border: none;
+        font-size: 16px;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .back-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(255, 61, 90, 0.4);
+      }
+
+      @media (max-width: 768px) {
+        .calculator-wrapper {
+          padding: 25px;
+        }
+        h2 {
+          font-size: 1.6rem;
+        }
+        label,
+        input,
+        select,
+        button {
+          font-size: 1rem;
+        }
+        #result {
+          font-size: 1.1rem;
+        }
+      }
+      /* Floating Social Buttons */
+      .floating-icons {
+        position: fixed;
+        left: 20px;
+        top: 90%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 10000;
+      }
+
+      .floating-icons .social-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 30px;
+        padding: 12px 20px;
+        color: var(--text-primary);
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      }
+      @keyframes shake-strong {
+        0% {
+          transform: translateX(0);
+        }
+        20% {
+          transform: translateX(-6px);
+        }
+        40% {
+          transform: translateX(6px);
+        }
+        60% {
+          transform: translateX(-6px);
+        }
+        80% {
+          transform: translateX(6px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .floating-icons .social-btn img {
+        width: 24px;
+        height: 24px;
+      }
+      .floating-icons .social-btn.whatsapp {
+        background: #25d366;
+        box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        color: #fff;
+      }
+
+      .floating-icons .social-btn.facebook {
+        background: #1877f2;
+        box-shadow: 0 8px 20px rgba(24, 119, 242, 0.4);
+        color: #fff;
+      }
+
+      .floating-icons .social-btn span {
+        display: inline-block;
+      }
+
+      /* אנימציה עדינה של תזוזה למעלה ולמטה */
+      @keyframes float-btn {
+        0%,
+        100% {
+          transform: translateX(0) translateY(0);
+        }
+        50% {
+          transform: translateX(0) translateY(-4px);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .floating-icons {
+          left: 10px;
+          gap: 10px;
+        }
+        .floating-icons .social-btn {
+          padding: 10px 15px;
+          font-size: 0.9rem;
+        }
+        .floating-icons .social-btn img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    </style>
+  </head>
+  <link rel="icon" type="image/jpeg" href="images/images14.jpg" />
+  <body>
+    <button class="back-btn" onclick="history.back()">← חזור</button>
+
+    <div class="calculator-wrapper">
+      <h2>מחשבון מטרים - מ"ר אלומיניום</h2>
+
+      <label for="type">בחר סוג מוצר :</label>
+      <select id="type">
+        <option value="1450">חלון בלגי מעוצב החל מ - 1,450 ₪ למ"ר</option>
+        <option value="900">חלון קלאסי דגם 7000 החל מ - 900 ₪ למ"ר</option>
+        <option value="1100">חלון קלאסי דגם 9000 החל מ - 1,100 ₪ למ"ר</option>
+        <option value="3800">דלת בלגית מעוצבת החל - 3,800 ₪ ליחידה</option>
+        <option value="3350">דלת מדגם 2000 קלאסי החל מ - 3,350 ₪ ליחידה</option>
+        <option value="450">רשתות נגד יתושים החל מ - 450 ₪ למ"ר</option>
+      </select>
+
+      <label for="meters">כמה מטרים ?</label>
+      <input type="number" id="meters" placeholder="לדוגמה : 40" min="1" />
+
+      <button onclick="calcPrice()">חשב מחיר</button>
+      <div id="result">המחיר יוצג כאן ...</div>
+    </div>
+
+    <!-- Floating Social Buttons -->
+    <div class="floating-icons">
+      <a
+        href="https://wa.me/972507527335"
+        target="_blank"
+        class="social-btn whatsapp"
+        title="וואטסאפ"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="וואטסאפ"
+        />
+        <span>וואטסאפ</span>
+      </a>
+      <a
+        href="https://www.facebook.com/alumpsagot"
+        target="_blank"
+        class="social-btn facebook"
+        title="פייסבוק"
+      >
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/124/124010.png"
+          alt="פייסבוק"
+        />
+        <span>פייסבוק</span>
+      </a>
+    </div>
+
+    <script>
+      function calcPrice() {
+        const typePrice = parseFloat(document.getElementById("type").value);
+        const meters = parseFloat(document.getElementById("meters").value);
+        if (!meters || meters <= 0) {
+          document.getElementById("result").textContent =
+            "אנא הזן מספר מטרים תקין.";
+          return;
+        }
+        const total = typePrice * meters;
+        document.getElementById(
+          "result"
+        ).textContent = `מחיר משוער: ${total.toLocaleString()} ₪`;
+      }
+    </script>
+  </body>
+</html>

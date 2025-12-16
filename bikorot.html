@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>אבי משיח אלומיניום - ביקורות</title>
+    <link rel="icon" type="image/jpeg" href="images/images14.jpg" />
+
+    <!-- SEO בסיסי -->
+    <meta
+      name="description"
+      content="ביקורות ודירוגי לקוחות על אבי משיח אלומיניום – שירות מקצועי בתחום האלומיניום, חלונות ודלתות בלגיים."
+    />
+    <meta
+      name="keywords"
+      content="ביקורות אלומיניום, לקוחות אבי משיח, דלתות בלגיים, חלונות אלומיניום, תריסים חשמליים, סגירות חורף"
+    />
+    <meta name="author" content="אבי משיח אלומיניום" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.avimashiach.co.il/bikorot.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="ביקורות - אבי משיח אלומיניום" />
+    <meta
+      property="og:description"
+      content="ביקורות ודירוגי לקוחות על חלונות ודלתות בלגיים, תריסים חשמליים ופרויקטים אלומיניום."
+    />
+    <meta
+      property="og:image"
+      content="https://www.avimashiach.co.il/images/images14.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://www.avimashiach.co.il/bikorot.html"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ביקורות - אבי משיח אלומיניום" />
+    <meta
+      name="twitter:description"
+      content="ביקורות ודירוגי לקוחות על חלונות ודלתות בלגיים, תריסים חשמליים ופרויקטים אלומיניום."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.avimashiach.co.il/images/images14.jpg"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ביקורות ודירוג - אבי משיח אלומיניום</title>
+    <style>
+      :root {
+        --bg-dark: #1a1a22;
+        --bg-glass: rgba(255, 255, 255, 0.05);
+        --border-glass: rgba(255, 255, 255, 0.08);
+        --text-primary: #ffffff;
+        --text-secondary: rgba(255, 255, 255, 0.6);
+        --accent-red: #ff3d5a;
+        --accent-green: #00d4aa;
+        --accent-gold: #ffd700;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+        background: linear-gradient(135deg, #1a1a22, #0a0a0f);
+        color: var(--text-primary);
+        overflow-x: hidden;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--bg-dark);
+        padding: 20px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      nav {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        padding: 10px 18px;
+        border-radius: 12px;
+        transition: 0.3s;
+        font-weight: 600;
+      }
+
+      nav a:hover,
+      nav a.nav-active {
+        background: var(--bg-glass);
+        border: 1px solid var(--border-glass);
+        color: var(--text-primary);
+      }
+
+      .reviews-wrapper {
+        max-width: 1150px;
+        margin: 40px auto;
+        padding: 20px;
+        z-index: 2;
+        position: relative;
+      }
+
+      .review-form {
+        background: var(--bg-glass);
+        padding: 30px;
+        border-radius: 25px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        margin-bottom: 40px;
+        backdrop-filter: blur(30px);
+      }
+
+      .review-form input,
+      .review-form textarea,
+      .review-form select {
+        width: 100%;
+        padding: 15px 20px;
+        margin-bottom: 15px;
+        border-radius: 12px;
+        border: 1px solid var(--border-glass);
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text-primary);
+        font-size: 16px;
+        resize: none;
+      }
+
+      .review-form button {
+        padding: 15px 35px;
+        background: linear-gradient(
+          135deg,
+          var(--accent-red),
+          var(--accent-gold)
+        );
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--text-primary);
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .review-form button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(255, 61, 90, 0.4);
+      }
+
+      .reviews-table-wrapper {
+        overflow-x: auto;
+      }
+
+      .reviews-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: var(--bg-glass);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+        color: var(--text-primary);
+      }
+
+      .reviews-table th,
+      .reviews-table td {
+        padding: 18px;
+        font-size: 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
+        vertical-align: top;
+      }
+
+      .reviews-table th {
+        background: rgba(255, 255, 255, 0.08);
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .reviews-table tr:nth-child(even) td {
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .reviews-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .back-btn {
+        display: block;
+        margin: 20px auto;
+        padding: 12px 25px;
+        background: linear-gradient(
+          135deg,
+          var(--accent-red),
+          var(--accent-gold)
+        );
+        color: var(--text-primary);
+        border: none;
+        font-size: 16px;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      /* Floating Social Buttons */
+      .floating-icons {
+        position: fixed;
+        left: 20px;
+        top: 90%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 10000;
+      }
+
+      .floating-icons .social-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 30px;
+        padding: 12px 20px;
+        color: var(--text-primary);
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      }
+      @keyframes shake-strong {
+        0% {
+          transform: translateX(0);
+        }
+        20% {
+          transform: translateX(-6px);
+        }
+        40% {
+          transform: translateX(6px);
+        }
+        60% {
+          transform: translateX(-6px);
+        }
+        80% {
+          transform: translateX(6px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .floating-icons .social-btn img {
+        width: 24px;
+        height: 24px;
+      }
+      .floating-icons .social-btn.whatsapp {
+        background: #25d366;
+        box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        color: #fff;
+      }
+
+      .floating-icons .social-btn.facebook {
+        background: #1877f2;
+        box-shadow: 0 8px 20px rgba(24, 119, 242, 0.4);
+        color: #fff;
+      }
+
+      .floating-icons .social-btn span {
+        display: inline-block;
+      }
+
+      /* אנימציה עדינה של תזוזה למעלה ולמטה */
+      @keyframes float-btn {
+        0%,
+        100% {
+          transform: translateX(0) translateY(0);
+        }
+        50% {
+          transform: translateX(0) translateY(-4px);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .floating-icons {
+          left: 10px;
+          gap: 10px;
+        }
+        .floating-icons .social-btn {
+          padding: 10px 15px;
+          font-size: 0.9rem;
+        }
+        .floating-icons .social-btn img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .back-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(255, 61, 90, 0.4);
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          align-items: center;
+        }
+        .review-form input,
+        .review-form textarea,
+        .review-form select,
+        .review-form button,
+        .reviews-table th,
+        .reviews-table td {
+          font-size: 14px;
+          padding: 10px;
+        }
+      }
+
+      /* תיקון תצוגת כוכבים ב-select במחשב */
+      .review-form select option {
+        background: #ffffff;
+        color: #000000;
+      }
+    </style>
+  </head>
+  <link rel="icon" type="image/jpeg" href="images/images14.jpg" />
+  <body>
+    <button class="back-btn" onclick="history.back()">← חזור</button>
+
+    <div class="reviews-wrapper">
+      <div class="review-form">
+        <input type="text" id="name" placeholder="שם מלא" required />
+        <textarea
+          id="comment"
+          placeholder="כתוב את הביקורת שלך..."
+          rows="4"
+          required
+        ></textarea>
+        <select id="rating" required>
+          <option value="">בחר דירוג כוכבים</option>
+          <option value="1">★</option>
+          <option value="2">★★</option>
+          <option value="3">★★★</option>
+          <option value="4">★★★★</option>
+          <option value="5">★★★★★</option>
+        </select>
+        <button type="button" onclick="addReview()">שלח ביקורת</button>
+      </div>
+
+      <!-- Floating Social Buttons -->
+      <div class="floating-icons">
+        <a
+          href="https://wa.me/972507527335"
+          target="_blank"
+          class="social-btn whatsapp"
+          title="וואטסאפ"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="וואטסאפ"
+          />
+          <span>וואטסאפ</span>
+        </a>
+        <a
+          href="https://www.facebook.com/alumpsagot"
+          target="_blank"
+          class="social-btn facebook"
+          title="פייסבוק"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/124/124010.png"
+            alt="פייסבוק"
+          />
+          <span>פייסבוק</span>
+        </a>
+      </div>
+
+      <div class="reviews-table-wrapper">
+        <table class="reviews-table">
+          <thead>
+            <tr>
+              <th>שם</th>
+              <th>ביקורת</th>
+              <th>דירוג</th>
+            </tr>
+          </thead>
+          <tbody id="reviews-body">
+            <!-- ביקורות ייטענו כאן בזמן אמת -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Firebase Compat SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyDBWbEFCIaiHnus8WsgJCaHhts0El_-y8I",
+        authDomain: "avimashiach-af153.firebaseapp.com",
+        databaseURL: "https://avimashiach-af153-default-rtdb.firebaseio.com",
+        projectId: "avimashiach-af153",
+        storageBucket: "avimashiach-af153.appspot.com",
+        messagingSenderId: "86516578206",
+        appId: "1:86516578206:web:860450c96944499187488f",
+        measurementId: "G-LGKBC32VRY",
+      };
+
+      const app = firebase.initializeApp(firebaseConfig);
+      const database = firebase.database();
+      const reviewsRef = database.ref("reviews");
+      const reviewsBody = document.getElementById("reviews-body");
+
+      function addReview() {
+        const name = document.getElementById("name").value.trim();
+        const comment = document.getElementById("comment").value.trim();
+        const rating = document.getElementById("rating").value;
+
+        if (name && comment && rating) {
+          reviewsRef.push({ name, comment, rating });
+          document.getElementById("name").value = "";
+          document.getElementById("comment").value = "";
+          document.getElementById("rating").value = "";
+        } else {
+          alert("אנא מלא את כל השדות לפני שליחה.");
+        }
+      }
+
+      reviewsRef.on("value", function (snapshot) {
+        reviewsBody.innerHTML = "";
+        snapshot.forEach(function (childSnapshot) {
+          const review = childSnapshot.val();
+          const row = document.createElement("tr");
+          row.innerHTML = `<td>${review.name}</td><td>${
+            review.comment
+          }</td><td>${"★".repeat(review.rating)}</td>`;
+          reviewsBody.appendChild(row);
+        });
+      });
+    </script>
+  </body>
+</html>
