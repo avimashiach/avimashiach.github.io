@@ -234,10 +234,14 @@ section {
   padding: 60px;
   background: var(--bg-glass);
   backdrop-filter: blur(40px);
-  border: 20px solid var(--border-glass);
+  border: 2px solid rgba(255, 61, 90, 0.8);
   border-radius: 32px;
   text-align: center;
+
+  box-shadow: 0 0 25px rgba(255, 61, 90, 0.6), 0 0 60px rgba(255, 61, 90, 0.45),
+    inset 0 0 20px rgba(255, 61, 90, 0.25);
 }
+
 .newsletter-form {
   display: flex;
   gap: 12px;
@@ -245,6 +249,7 @@ section {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .newsletter-form input,
 .newsletter-form textarea {
   width: 100%;
@@ -255,9 +260,11 @@ section {
   color: var(--text-primary);
   font-size: 1rem;
 }
+
 .newsletter-form textarea {
   resize: none;
 }
+
 .newsletter-form button {
   padding: 18px 36px;
   background: linear-gradient(135deg, var(--accent-red), #ff6b6b);
@@ -268,6 +275,7 @@ section {
   cursor: pointer;
   transition: 0.3s;
 }
+
 .newsletter-form button:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 40px rgba(255, 61, 90, 0.4);
@@ -588,6 +596,9 @@ body::before {
   gap: 40px;
 }
 
+/* ==============================
+   קוביות עם זוהר לבן
+============================== */
 .feature-item {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -597,13 +608,19 @@ body::before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s, background 0.3s;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
   cursor: pointer;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5),
+    0 0 30px rgba(255, 255, 255, 0.35), inset 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .feature-item:hover {
   transform: translateY(-10px);
   background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.9),
+    0 0 50px rgba(255, 255, 255, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .icon {
@@ -617,21 +634,30 @@ body::before {
   text-align: center;
 }
 
-/* רספונסיבי */
+/* ==============================
+   רספונסיבי + זוהר גם במובייל
+============================== */
 @media (max-width: 768px) {
   .features {
     gap: 20px;
   }
+
   .feature-item {
     width: 140px;
     padding: 20px 15px;
+
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.6),
+      0 0 25px rgba(255, 255, 255, 0.4), inset 0 0 8px rgba(255, 255, 255, 0.2);
   }
+
   .why-choose-us h2 {
     font-size: 2rem;
   }
+
   .why-choose-us p {
     font-size: 1rem;
   }
+
   .icon {
     font-size: 40px;
   }
