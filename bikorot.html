@@ -1,0 +1,223 @@
+<!doctype html>
+
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>אבי משיח אלומיניום - ביקורות</title>
+    <link rel="icon" type="image/jpeg" href="images/images14.jpg" />
+
+    <style>
+      :root {
+        --red-main: #d32f2f;
+        --red-dark: #b71c1c;
+        --red-light: #ffebee;
+        --white: #ffffff;
+        --gray-light: #f5f5f5;
+        --gray-border: #e0e0e0;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom, #ffffff, #ffebee);
+        color: #222;
+        min-height: 100vh;
+      }
+
+      /* כפתור חזור */
+      .back-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 12px 25px;
+        background: linear-gradient(135deg, var(--red-main), var(--red-dark));
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        z-index: 999;
+      }
+
+      .back-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .reviews-wrapper {
+        max-width: 1000px;
+        margin: 80px auto;
+        padding: 20px;
+      }
+
+      .review-form {
+        background: var(--white);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-top: 5px solid var(--red-main);
+        margin-bottom: 30px;
+      }
+
+      .review-form input,
+      .review-form textarea,
+      .review-form select {
+        width: 100%;
+        padding: 14px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1px solid var(--gray-border);
+        font-size: 16px;
+        background: var(--gray-light);
+      }
+
+      .review-form button {
+        background: linear-gradient(135deg, var(--red-main), var(--red-dark));
+        color: white;
+        border: none;
+        padding: 14px 30px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .reviews-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .reviews-table th {
+        background: var(--red-main);
+        color: white;
+        padding: 15px;
+      }
+
+      .reviews-table td {
+        padding: 15px;
+        border-bottom: 1px solid var(--gray-border);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- כפתור חזור ל index.html -->
+    <button class="back-btn" onclick="window.location.href = 'index.html'">
+      ← חזור לאתר
+    </button>
+
+    <div class="reviews-wrapper">
+      <div class="review-form">
+        <input type="text" id="name" placeholder="שם מלא" required />
+
+        <textarea
+          id="comment"
+          placeholder="כתוב את הביקורת שלך..."
+          rows="4"
+          required
+        ></textarea>
+
+        <select id="rating" required>
+          <option value="">בחר דירוג</option>
+          <option value="1">★</option>
+          <option value="2">★★</option>
+          <option value="3">★★★</option>
+          <option value="4">★★★★</option>
+          <option value="5">★★★★★</option>
+        </select>
+
+        <button type="button" onclick="addReview()">שלח ביקורת</button>
+      </div>
+
+      <table class="reviews-table">
+        <thead>
+          <tr>
+            <th>שם</th>
+            <th>ביקורת</th>
+            <th>דירוג</th>
+          </tr>
+        </thead>
+
+        <tbody id="reviews-body"></tbody>
+      </table>
+    </div>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyDBWbEFCIaiHnus8WsgJCaHhts0El_-y8I",
+        authDomain: "avimashiach-af153.firebaseapp.com",
+        databaseURL: "https://avimashiach-af153-default-rtdb.firebaseio.com",
+        projectId: "avimashiach-af153",
+        storageBucket: "avimashiach-af153.appspot.com",
+        messagingSenderId: "86516578206",
+        appId: "1:86516578206:web:860450c96944499187488f",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+
+      const database = firebase.database();
+      const reviewsRef = database.ref("reviews");
+      const reviewsBody = document.getElementById("reviews-body");
+
+      function addReview() {
+        const name = document.getElementById("name").value.trim();
+        const comment = document.getElementById("comment").value.trim();
+        const rating = document.getElementById("rating").value;
+
+        if (name && comment && rating) {
+          reviewsRef.push({
+            name,
+            comment,
+            rating,
+          });
+
+          document.getElementById("name").value = "";
+          document.getElementById("comment").value = "";
+          document.getElementById("rating").value = "";
+        } else {
+          alert("אנא מלא את כל השדות");
+        }
+      }
+
+      reviewsRef.on("value", function (snapshot) {
+        reviewsBody.innerHTML = "";
+
+        snapshot.forEach(function (childSnapshot) {
+          const review = childSnapshot.val();
+
+          const row = document.createElement("tr");
+
+          row.innerHTML =
+            "<td>" +
+            review.name +
+            "</td>" +
+            "<td>" +
+            review.comment +
+            "</td>" +
+            "<td>" +
+            "★".repeat(review.rating) +
+            "</td>";
+
+          reviewsBody.appendChild(row);
+        });
+      });
+    </script>
+  </body>
+</html>
